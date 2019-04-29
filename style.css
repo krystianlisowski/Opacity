@@ -1,0 +1,56 @@
+:root{
+    --light: 0.1;
+    --glow: 5px;
+}
+
+html {
+    font-size: 20px;
+    font-family: "Gugi", sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    background-image: url("background.jpeg");
+    background-size: cover;
+    background-position: bottom center;
+}
+
+.night{
+    height: 100vh;
+    background-color: black;
+    opacity: calc(1 - var(--light));
+}
+
+.neon{
+    font-size: 4rem;
+    color: greenyellow;
+    position: absolute;
+    left: 3%;
+    bottom: 3%;
+    letter-spacing: .5rem;
+    text-shadow: rgba(255, 255, 255, 0.8) 0 0 calc(5 * var(--glow)), greenyellow 0 0 var(--glow); 
+    opacity: var(--light);
+}
+
+.far{
+    font-size: 6rem;
+    letter-spacing: 1.5rem;
+}
+
+input{
+    position: absolute;
+    width: 300px;
+    top: 30px;
+    left: 30px;
+    height: 70px;
+}
+
+
+@media(min-width){
+    html{
+        font-size: 20px;
+    }
+}
